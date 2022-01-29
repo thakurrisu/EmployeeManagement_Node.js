@@ -39,6 +39,7 @@ const createStudent = (req, res) => {
     .save()
     .then(() => {
       res.status(201).send(data);
+      console.log(data);
     })
     .catch((err) => {
       res.status(400).send(err);

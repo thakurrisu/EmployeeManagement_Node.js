@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
+const Db =
+  'mongodb+srv://rishu:O0txGgBjpL5wvPEa@cluster0.whohj.mongodb.net/mern?retryWrites=true&w=majority';
 mongoose
   .connect(
-    'mongodb+srv://thakurrisu:1234@cluster0.zbdra.mongodb.net/employees_db?retryWrites=true&w=majority'
+    Db,
+
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      dbName: 'employees_db',
+    }
   )
   .then(() => {
     console.log('Db connection successful');
